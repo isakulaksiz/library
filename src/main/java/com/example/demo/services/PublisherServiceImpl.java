@@ -20,6 +20,7 @@ public class PublisherServiceImpl implements PublisherService {
 	@Override
 	public List<Publisher> findAll() {
 		//TODO
+		return null;
 	}
 
 	@Override

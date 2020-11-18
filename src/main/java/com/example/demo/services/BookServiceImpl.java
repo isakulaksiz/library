@@ -17,6 +17,7 @@ public class BookServiceImpl implements BookService {
 	@Override
 	public List<Book> findAll() {
 		//TODO
+		return null;
 	}
 
 	@Override
