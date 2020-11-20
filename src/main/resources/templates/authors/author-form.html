@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<title>Save Author</title>
+</head>
+<body>
+	<div class="container">
+		<h3>Author Directory</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Author Employee</p>
+		
+		<form action="#" th:action="@{/authors/save}"
+						 th:object="${author}" method="POST">
+						 
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{id}"/>
+			
+			
+			<input type="text" th:field="*{authorname}"
+							   class="form-control mb-4 col-4" placeholder="Author name">
+							   
+			<input type="text" th:field="*{authordesc}"
+							   class="form-control mb-4 col-4" placeholder="Description">
+			
+			<button type="submit" class="btn btn-info col-2">Save</button>
+		</form>
+		
+		<hr>
+		<a th:href="@{/authors/list}">Back to Authors List</a>
+		
+	</div>
+</body>
+</html>

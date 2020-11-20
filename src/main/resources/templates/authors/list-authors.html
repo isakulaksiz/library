@@ -15,7 +15,11 @@
 
 
 	<h3>Author Directory</h3>
-	<hr>	
+	<hr>
+	
+	<!-- Add a button -->
+	<a th:href="@{/authors/showFormForAdd}" class="btn btn-primary btn-sm mb-3">Add Employee</a>
+	
 	
 	<table class="table table-bordered table-striped">
 		<thead class="thead-dark">
@@ -27,14 +31,12 @@
 		</thead>
 		
 		<tbody>
+			<tr th:if="${authors.empty}">
+	            <td colspan="2"> No Authors Available </td>
+	        </tr>
 			<tr th:each="tempAuthor : ${authors}">
-				<td th:text="${tempAuthor.authorName}"/>
-				<td th:text="${tempAuthor.descAuthor}"/>
-				
-				<!-- Add update button/link -->
-				<td>
-				
-				</td>
+				<td th:text="${tempAuthor.authorname}"/>
+				<td th:text="${tempAuthor.authordesc}"/>
 			</tr>
 		</tbody>
 	</table>

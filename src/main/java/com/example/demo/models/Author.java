@@ -16,21 +16,21 @@ public class Author {
 	@Column(name="id")
 	private int id;
 	
-	@Column(name="authorName")
-	private String authorName;
+	@Column(name="authorname")
+	private String authorname;
 	
-	@Column(name="descAuthor")
-	private String descAuthor;
+	@Column(name="authordesc")
+	private String authordesc;
 	
 	public Author() {
 		
 	}
 	
-	public Author(int id, String authorName, String descAuthor) {
+	public Author(int id, String authorname, String authordesc) {
 		super();
 		this.id = id;
-		this.authorName = authorName;
-		this.descAuthor = descAuthor;
+		this.authorname = authorname;
+		this.authordesc = authordesc;
 	}
 
 	public int getId() {
@@ -41,25 +41,25 @@ public class Author {
 		this.id = id;
 	}
 
-	public String getAuthorName() {
-		return authorName;
+	public String getauthorname() {
+		return authorname;
 	}
 
-	public void setAuthorName(String authorName) {
-		this.authorName = authorName;
+	public void setauthorname(String authorname) {
+		this.authorname = authorname;
 	}
 
-	public String getdescAuthor() {
-		return descAuthor;
+	public String getauthordesc() {
+		return authordesc;
 	}
 
-	public void setdescAuthor(String descAuthor) {
-		this.descAuthor = descAuthor;
+	public void setauthordesc(String authordesc) {
+		this.authordesc = authordesc;
 	}
 
 	@Override
 	public String toString() {
-		return "Author [id=" + id + ", authorName=" + authorName + ", descAuthor=" + descAuthor + "]";
+		return "Author [id=" + id + ", authorname=" + authorname + ", authordesc=" + authordesc + "]";
 	}
 	
 	
