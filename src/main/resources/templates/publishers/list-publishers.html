@@ -17,6 +17,9 @@
 	<h3>Publisher Directory</h3>
 	<hr>
 	
+	<!-- Add a button -->
+	<a th:href="@{/publishers/showFormAdd}" class="btn btn-primary btn-sm mb-3">ADD</a>
+	
 	<table class="table table-bordered table-striped">
 		<thead class="thead-dark">
 			<tr>
@@ -30,6 +33,11 @@
 			<tr th:each="tempBook : ${publishers}">
 				<td th:text="${tempBook.publisherName}"/>
 				<td th:text="${tempBook.descPublisher}"/>
+				
+				<td>
+					<!-- Add update button/link -->
+					<a th:href="@{/publishers/showFormUpdate(publisherId=${tempBook.id})}" class="btn btn-info btn-sm">Update</a>
+				</td>
 			</tr>
 		</tbody>
 	</table>
