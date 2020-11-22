@@ -37,7 +37,13 @@
 				
 				<td>
 					<!-- Add update button/link -->
-					<a th:href="@{/authors/showFormUpdate(authorId=${tempAuthor.id})}" class="btn btn-info btn-sm">Update</a>				
+					<a th:href="@{/authors/showFormUpdate(authorId=${tempAuthor.id})}" class="btn btn-info btn-sm">Update</a>
+					
+					<!-- Add delete button/link -->
+					<a th:href="@{/authors/delete(authorId=${tempAuthor.id})}" 
+						class="btn btn-danger btn-sm" 
+						onclick="if(!confirm('Are you sure want to delete this author?')) return false">Delete</a>
+					
 				</td>
 				
 			</tr>

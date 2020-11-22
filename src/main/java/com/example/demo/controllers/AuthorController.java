@@ -55,6 +55,14 @@ public class AuthorController {
 		return "authors/author-form";
 	}
 	
+	@GetMapping("/delete")
+	public String delete(@RequestParam("authorId") int theId) {
+		
+		authorService.deleteById(theId);
+		
+		return "redirect:/authors/list";
+	}
+	
 	@PostMapping("/save")
 	public String save(@ModelAttribute("author") Author theAuthor) {
 		
