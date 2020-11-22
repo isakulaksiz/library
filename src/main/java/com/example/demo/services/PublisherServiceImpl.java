@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.PublisherRepository;
 import com.example.demo.models.Publisher;
 
+@Service
 public class PublisherServiceImpl implements PublisherService {
 
 	private PublisherRepository publisherRepository;
@@ -19,8 +21,7 @@ public class PublisherServiceImpl implements PublisherService {
 	
 	@Override
 	public List<Publisher> findAll() {
-		//TODO
-		return null;
+		return publisherRepository.findAll();
 	}
 
 	@Override
