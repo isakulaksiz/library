@@ -25,7 +25,7 @@ public class Author {
 	public Author() {
 		
 	}
-	
+
 	public Author(int id, String authorname, String authordesc) {
 		super();
 		this.id = id;
@@ -41,19 +41,19 @@ public class Author {
 		this.id = id;
 	}
 
-	public String getauthorname() {
+	public String getAuthorname() {
 		return authorname;
 	}
 
-	public void setauthorname(String authorname) {
+	public void setAuthorname(String authorname) {
 		this.authorname = authorname;
 	}
 
-	public String getauthordesc() {
+	public String getAuthordesc() {
 		return authordesc;
 	}
 
-	public void setauthordesc(String authordesc) {
+	public void setAuthordesc(String authordesc) {
 		this.authordesc = authordesc;
 	}
 
@@ -61,6 +61,5 @@ public class Author {
 	public String toString() {
 		return "Author [id=" + id + ", authorname=" + authorname + ", authordesc=" + authordesc + "]";
 	}
-	
-	
+		
 }

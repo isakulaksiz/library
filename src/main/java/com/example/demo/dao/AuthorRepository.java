@@ -9,6 +9,5 @@ import com.example.demo.models.Author;
 
 @Repository
 public interface AuthorRepository extends JpaRepository<Author, Integer> {
-
-	public List<Author> findAllByOrderByAuthornameAsc();
+	public List<Author> findAll();
 }

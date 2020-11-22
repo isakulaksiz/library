@@ -45,6 +45,16 @@ public class AuthorController {
 		return "authors/author-form";
 	}
 	
+	@GetMapping("/showFormUpdate")
+	public String showFormUpdate(@RequestParam("authorId") int theId, Model theModel) {
+
+		Author theAuthor = authorService.findById(theId);
+		
+		theModel.addAttribute("author", theAuthor);
+		
+		return "authors/author-form";
+	}
+	
 	@PostMapping("/save")
 	public String save(@ModelAttribute("author") Author theAuthor) {
 		

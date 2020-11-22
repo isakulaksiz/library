@@ -18,7 +18,7 @@
 	<hr>
 	
 	<!-- Add a button -->
-	<a th:href="@{/authors/showFormForAdd}" class="btn btn-primary btn-sm mb-3">Add Employee</a>
+	<a th:href="@{/authors/showFormAdd}" class="btn btn-primary btn-sm mb-3">Add Employee</a>
 	
 	
 	<table class="table table-bordered table-striped">
@@ -31,12 +31,15 @@
 		</thead>
 		
 		<tbody>
-			<tr th:if="${authors.empty}">
-	            <td colspan="2"> No Authors Available </td>
-	        </tr>
 			<tr th:each="tempAuthor : ${authors}">
 				<td th:text="${tempAuthor.authorname}"/>
 				<td th:text="${tempAuthor.authordesc}"/>
+				
+				<td>
+					<!-- Add update button/link -->
+					<a th:href="@{/authors/showFormUpdate(authorId=${tempAuthor.id})}" class="btn btn-info btn-sm">Update</a>				
+				</td>
+				
 			</tr>
 		</tbody>
 	</table>
