@@ -26,6 +26,12 @@ public class BookController {
 		bookService = theBookService;
 	}
 	
+	@GetMapping("/home")
+	public String index() {
+		
+		return "books/list-books";
+	}
+	
 	@GetMapping("/list")
 	public String listBooks(Model theModel) {
 		

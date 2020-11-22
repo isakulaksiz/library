@@ -23,7 +23,7 @@ public class AuthorServiceImpl implements AuthorService {
 	public List<Author> findAll() {
 		return authorRepository.findAll();
 	}
-
+	
 	@Override
 	public Author findById(int theId) {
 		Optional<Author> result = authorRepository.findById(theId);

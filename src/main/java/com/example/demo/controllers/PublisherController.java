@@ -23,6 +23,12 @@ public class PublisherController {
 		publisherService = thePublisherService;
 	}
 	
+	@GetMapping("/home")
+	public String index() {
+		
+		return "publishers/list-publishers";
+	}
+	
 	@GetMapping("/list")
 	public String listPublishers(Model theModel) {
 		
