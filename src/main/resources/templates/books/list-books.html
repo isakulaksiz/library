@@ -44,6 +44,19 @@
 				<td th:text="${tempBook.publisherName}"/>
 				<td th:text="${tempBook.isbnNum}"/>
 				<td th:text="${tempBook.bookDetail}"/>
+				
+				
+				<td>
+					<!-- Add update button/link -->
+					<a th:href="@{/books/showFormUpdate(bookId=${tempBook.id})}" class="btn btn-info btn-sm">Update</a>
+					
+					<!-- Add delete button/link -->
+					<a th:href="@{/books/delete(bookId=${tempBook.id})}" 
+						class="btn btn-danger btn-sm" 
+						onclick="if(!confirm('Are you sure want to delete this book?')) return false">Delete</a>
+					
+				</td>
+				
 			</tr>
 		</tbody>
 	</table>

@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.demo.models.Author;
 import com.example.demo.models.Book;
 import com.example.demo.services.BookService;
 
@@ -42,6 +44,24 @@ public class BookController {
 		theModel.addAttribute("book", theBook);
 		
 		return "books/book-form";
+	}
+	
+	@GetMapping("/showFormUpdate")
+	public String showFormUpdate(@RequestParam("bookId") int theId, Model theModel) {
+
+		Book theBook = bookService.findById(theId);
+		
+		theModel.addAttribute("book", theBook);		
+		
+		return "books/book-form";
+	}
+	
+	@GetMapping("/delete")
+	public String delete(@RequestParam("bookId") int theId) {
+		
+		bookService.deleteById(theId);
+		
+		return "redirect:/books/list";
 	}
 	
 	@PostMapping("/save")
