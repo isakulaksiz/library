@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<title>Author Directory</title>
+</head>
+<body>
+<div class="container">
+
+
+	<h3>Book Directory</h3>
+	<hr>
+	
+	
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>Book Name</th>
+				<th>Book Under Name</th>
+				<th>Serial Name</th>
+				<th>Author Name</th>
+				<th>Publisher Name</th>
+				<th>ISBN Number</th>
+				<th>Book Detail</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="tempBook : ${books}">
+				<td th:text="${tempBook.bookname}"/>
+				<td th:text="${tempBook.bookUnderName}"/>
+				<td th:text="${tempBook.serialName}"/>
+				<td th:text="${tempBook.authorName}"/>
+				<td th:text="${tempBook.publisherName}"/>
+				<td th:text="${tempBook.isbnNum}"/>
+				<td th:text="${tempBook.bookDetail}"/>	
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

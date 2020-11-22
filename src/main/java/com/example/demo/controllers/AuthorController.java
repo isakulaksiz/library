@@ -1,4 +1,4 @@
-package com.example.demo.controllers;
+			package com.example.demo.controllers;
 
 import java.util.List;
 
@@ -50,7 +50,7 @@ public class AuthorController {
 
 		Author theAuthor = authorService.findById(theId);
 		
-		theModel.addAttribute("author", theAuthor);
+		theModel.addAttribute("author", theAuthor);		
 		
 		return "authors/author-form";
 	}

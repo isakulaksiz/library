@@ -3,9 +3,12 @@ package com.example.demo.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.example.demo.dao.BookRepository;
 import com.example.demo.models.Book;
 
+@Service
 public class BookServiceImpl implements BookService {
 
 	private BookRepository bookRepository;
@@ -16,8 +19,7 @@ public class BookServiceImpl implements BookService {
 	
 	@Override
 	public List<Book> findAll() {
-		//TODO
-		return null;
+		return bookRepository.findAll();
 	}
 
 	@Override

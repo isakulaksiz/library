@@ -16,36 +16,36 @@ public class Book {
 	@Column(name="id")
 	private int id;
 	
-	@Column(name="bookName")
-	private String bookName;
+	@Column(name="book_name")
+	private String bookname;
 	
-	@Column(name="bookUnderName")
+	@Column(name="book_under_name")
 	private String bookUnderName;
 	
-	@Column(name="serialName")
+	@Column(name="serial_name")
 	private String serialName;
 	
-	@Column(name="authorName")
+	@Column(name="authorname")
 	private String authorName;
 	
-	@Column(name="publisherName")
+	@Column(name="publisher_name")
 	private String publisherName;
 	
-	@Column(name="isbnNum")
+	@Column(name="isbn_num")
 	private int isbnNum;
 	
-	@Column(name="bookDetail")
+	@Column(name="book_detail")
 	private String bookDetail;
 	
 	public Book() {
 		
 	}
 
-	public Book(int id, String bookName, String bookUnderName, String serialName, String authorName,
+	public Book(int id, String bookname, String bookUnderName, String serialName, String authorName,
 			String publisherName, int isbnNum, String bookDetail) {
 		super();
 		this.id = id;
-		this.bookName = bookName;
+		this.bookname = bookname;
 		this.bookUnderName = bookUnderName;
 		this.serialName = serialName;
 		this.authorName = authorName;
@@ -62,12 +62,12 @@ public class Book {
 		this.id = id;
 	}
 
-	public String getBookName() {
-		return bookName;
+	public String getBookname() {
+		return bookname;
 	}
 
-	public void setBookName(String bookName) {
-		this.bookName = bookName;
+	public void setBookname(String bookname) {
+		this.bookname = bookname;
 	}
 
 	public String getBookUnderName() {
@@ -120,10 +120,9 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", bookName=" + bookName + ", bookUnderName=" + bookUnderName + ", serialName="
+		return "Book [id=" + id + ", bookname=" + bookname + ", bookUnderName=" + bookUnderName + ", serialName="
 				+ serialName + ", authorName=" + authorName + ", publisherName=" + publisherName + ", isbnNum="
 				+ isbnNum + ", bookDetail=" + bookDetail + "]";
 	}
-	
 	
 }
