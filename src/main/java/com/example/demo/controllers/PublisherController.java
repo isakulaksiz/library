@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.demo.models.Book;
 import com.example.demo.models.Publisher;
 import com.example.demo.services.PublisherService;
 
@@ -52,6 +51,14 @@ public class PublisherController {
 		theModel.addAttribute("publisher", thePublisher);		
 		
 		return "publishers/publisher-form";
+	}
+	
+	@GetMapping("/delete")
+	public String delete(@RequestParam("publisherId") int theId) {
+		
+		publisherService.deleteById(theId);
+		
+		return "redirect:/publishers/list";
 	}
 	
 	@PostMapping("/save")

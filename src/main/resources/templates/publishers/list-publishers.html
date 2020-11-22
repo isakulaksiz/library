@@ -30,13 +30,18 @@
 		</thead>
 		
 		<tbody>
-			<tr th:each="tempBook : ${publishers}">
-				<td th:text="${tempBook.publisherName}"/>
-				<td th:text="${tempBook.descPublisher}"/>
+			<tr th:each="tempPublisher : ${publishers}">
+				<td th:text="${tempPublisher.publisherName}"/>
+				<td th:text="${tempPublisher.descPublisher}"/>
 				
 				<td>
 					<!-- Add update button/link -->
-					<a th:href="@{/publishers/showFormUpdate(publisherId=${tempBook.id})}" class="btn btn-info btn-sm">Update</a>
+					<a th:href="@{/publishers/showFormUpdate(publisherId=${tempPublisher.id})}" class="btn btn-info btn-sm">Update</a>
+					
+					<!-- Add delete button/link -->
+					<a th:href="@{/publishers/delete(publisherId=${tempPublisher.id})}" 
+						class="btn btn-danger btn-sm" 
+						onclick="if(!confirm('Are you sure want to delete this publisher?')) return false">Delete</a>
 				</td>
 			</tr>
 		</tbody>
