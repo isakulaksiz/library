@@ -1,0 +1,11 @@
+.container{
+	width: 400px;
+	height: 500px;
+	padding: 5px;
+	margin: 3px;
+}
+.container-link{
+	text-decoration: none;
+	padding: 2px;
+	font-family:sans-serif;
+}

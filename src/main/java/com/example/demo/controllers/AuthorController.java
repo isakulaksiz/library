@@ -62,7 +62,7 @@ public class AuthorController {
 		
 		return "redirect:/authors/list";
 	}
-	
+		
 	@PostMapping("/save")
 	public String save(@ModelAttribute("author") Author theAuthor) {
 		
