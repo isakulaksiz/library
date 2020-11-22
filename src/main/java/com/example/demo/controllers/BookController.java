@@ -34,4 +34,21 @@ public class BookController {
 		return "books/list-books";
 	}
 	
+	@GetMapping("/showFormAdd")
+	public String showFormAdd(Model theModel) {
+		
+		Book theBook = new Book();
+		
+		theModel.addAttribute("book", theBook);
+		
+		return "books/book-form";
+	}
+	
+	@PostMapping("/save")
+	public String save(@ModelAttribute("book") Book theBook) {
+		
+		bookService.save(theBook);
+		
+		return "redirect:/books/list";
+	}
 }
