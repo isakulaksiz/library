@@ -5,9 +5,9 @@ library app based on Spring Boot
  - [x] Yayın Evi Tanımı yapılabilmeli ( Yayın Evi Adı, Açıklama )
  - [x] Kitap tanıtımı yapılabilmeli ( kitap adı, kitap alt adı, kitap seri  
 adı, yazar, yayın evi, isbn numarası, açıklama )
- - [ ] Bir Yazar için n tane kitap tanımlanabilmeli
- - [ ] Bir Yayın evi için n tane kitap tanımlanabilmeli  
- - [x] Kitap adı, Seri adı, Yazar ya da ISBN ile arama yapılabilmeli !!
+ - [x] Bir Yazar için n tane kitap tanımlanabilmeli
+ - [x] Bir Yayın evi için n tane kitap tanımlanabilmeli  
+ - [x] Kitap adı, Seri adı, Yazar ya da ISBN ile arama yapılabilmeli !Hata var
  - [x] Var olan bir kayıt üzerinde değişiklik yapılabilmeli
  - [x] Var olan kayıtlar incelebilmeli
  - [x] Var olan bir kayıt silinebilmeli
