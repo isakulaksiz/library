@@ -25,6 +25,15 @@ public class AuthorServiceImpl implements AuthorService {
 	}
 	
 	@Override
+	public List<Author> listAll(String keyword){
+		if(keyword != null) {
+			return authorRepository.search(keyword);
+		}
+		return authorRepository.findAll();
+		
+	}
+	
+	@Override
 	public Author findById(int theId) {
 		Optional<Author> result = authorRepository.findById(theId);
 

@@ -1,4 +1,4 @@
-			package com.example.demo.controllers;
+package com.example.demo.controllers;
 
 import java.util.List;
 
@@ -32,6 +32,15 @@ public class AuthorController {
 		return "authors/list-authors";
 	}
 	
+	@RequestMapping("/list")
+	public String viewHomePage(Model theModel, @Param("keyword") String keyword) {
+		List<Author> theListAuthors = authorService.listAll(keyword);
+		theModel.addAttribute("listAuthors", theListAuthors);
+		theModel.addAttribute("keyword", keyword);
+		
+		return "authors/list-authors";
+	}
+	/*
 	@GetMapping("/list")
 	public String listAuthors(Model theModel) {
 		
@@ -41,7 +50,7 @@ public class AuthorController {
 		
 		return "authors/list-authors";
 	}
-	
+	*/
 	@GetMapping("/showFormAdd")
 	public String showFormAdd(Model theModel) {
 		

@@ -13,16 +13,22 @@
 <body>
 <div class="container">
 
-
 	<h3>Author Directory</h3>
 	<hr>
-	
-	<!-- Add a button -->
-	<a th:href="@{/authors/showFormAdd}" class="btn btn-primary btn-sm mb-3">ADD</a>
-	
-	<!-- Home button -->
-	<a th:href="@{/home}" class="btn btn-info btn-sm mb-3">Home</a>
-	
+	<div>
+		<!-- Add a button -->
+		<a th:href="@{/authors/showFormAdd}" class="btn btn-primary btn-sm mb-3">ADD</a>
+		
+		<!-- Home button -->
+		<a th:href="@{/home}" class="btn btn-info btn-sm mb-3">Home</a>
+	</div>
+	<div>
+		<form th:action="@{/authors/list}" >
+		    Filter: <input type="text" name="keyword" required th:value="${keyword}" />
+		    &nbsp;
+		    <input type="submit" value="Search" class="btn btn-info btn-sm"/>
+		</form>
+	</div>
 	<table class="table table-bordered table-striped">
 		<thead class="thead-dark">
 			<tr>
@@ -33,16 +39,16 @@
 		</thead>
 		
 		<tbody>
-			<tr th:each="tempAuthor : ${authors}">
-				<td th:text="${tempAuthor.authorname}"/>
-				<td th:text="${tempAuthor.authordesc}"/>
+			<tr th:each="key : ${listAuthors}">
+				<td th:text="${key.authorname}"/>
+				<td th:text="${key.authordesc}"/>
 				
 				<td>
 					<!-- Add update button/link -->
-					<a th:href="@{/authors/showFormUpdate(authorId=${tempAuthor.id})}" class="btn btn-info btn-sm">Update</a>
+					<a th:href="@{/authors/showFormUpdate(authorId=${key.id})}" class="btn btn-info btn-sm">Update</a>
 					
 					<!-- Add delete button/link -->
-					<a th:href="@{/authors/delete(authorId=${tempAuthor.id})}" 
+					<a th:href="@{/authors/delete(authorId=${key.id})}" 
 						class="btn btn-danger btn-sm" 
 						onclick="if(!confirm('Are you sure want to delete this author?')) return false">Delete</a>
 					

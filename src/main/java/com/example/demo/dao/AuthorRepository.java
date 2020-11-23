@@ -11,4 +11,7 @@ import com.example.demo.models.Author;
 @Repository
 public interface AuthorRepository extends JpaRepository<Author, Integer> {
 	public List<Author> findAll();
+	
+	@Query(value="SELECT authorname from Author WHERE authorname LIKE '%?1%'")
+	public List<Author> search(String keyword);
 }
