@@ -20,7 +20,7 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 	mvn spring-boot:run
 ```
  ### Maven
-    <dependency>
+    		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
@@ -52,8 +52,12 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 			<scope>runtime</scope>
 		</dependency>
 
- ##### Display
- ![author](https://user-images.githubusercontent.com/26628508/99960245-7b7f7c80-2d9d-11eb-90cc-31193e302537.png)
+
+##### Display
+![home](https://user-images.githubusercontent.com/26628508/99963559-03b45080-2da3-11eb-9e96-399fe44e6618.png)
+
+![author1](https://user-images.githubusercontent.com/26628508/99963549-01ea8d00-2da3-11eb-9f7b-3672f695c846.png)
+
 ![author detail](https://user-images.githubusercontent.com/26628508/99960247-7cb0a980-2d9d-11eb-8510-0d2848100f02.png)
 
 ## Project Structure
