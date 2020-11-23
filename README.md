@@ -89,3 +89,4 @@ After creating the database/schema, you need to add your  **MySQL**  `username` 
 	spring.jpa.properties.hibernate.format_sql=true
 ```
 ### EER Diagram
+![err](https://user-images.githubusercontent.com/26628508/99977724-0ff5d900-2db6-11eb-839c-9fd9c76c19ae.png)
