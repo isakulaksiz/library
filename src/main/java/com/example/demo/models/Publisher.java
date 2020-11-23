@@ -1,10 +1,16 @@
 package com.example.demo.models;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -21,6 +27,9 @@ public class Publisher {
 	
 	@Column(name="descPublisher")
 	private String descPublisher;
+	
+	@OneToMany(mappedBy="book",cascade= {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
+	private List<Book> book;
 	
 	public Publisher() {
 		
@@ -55,6 +64,14 @@ public class Publisher {
 
 	public void setDescPublisher(String descPublisher) {
 		this.descPublisher = descPublisher;
+	}
+	
+	public List<Book> getBook() {
+		return book;
+	}
+
+	public void setBook(List<Book> book) {
+		this.book = book;
 	}
 
 	@Override
